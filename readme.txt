@@ -7,8 +7,6 @@ Tested up to: 4.1.1
 Stable tag: 1.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-WC requires at least: 2.3.7
-WC tested up to: 2.3.7
 
 Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email Interface of WooCommerce.
 
