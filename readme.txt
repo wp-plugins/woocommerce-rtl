@@ -1,6 +1,6 @@
 === WooCommerce RTL ===
 Contributors: Updula
-Tags: WooCommerce, RTL, right-to-left, i18n, Arabic, Azeri, Azerbaijani1, Bakhtiari, Balochi, Farsi, Persian, Gilaki, Javanese3, Kashmiri, Kazakh3, Kurdish, Sorani, Malay, Malayalam, Pashto, Punjabi, Qashqai, Sindhi, Somali, Sulu, Takestani, Turkmen, Uighur, Western Cham
+Tags: Arabic, Azeri, Azerbaijani1, Bakhtiari, Balochi, Farsi, Persian, Gilaki, Javanese3, Kashmiri, Kazakh3, Kurdish, Sorani, Malay, Malayalam, Pashto, Punjabi, Qashqai, Sindhi, Somali, Sulu, Takestani, Turkmen, Uighur, Western Cham, WooCommerce, RTL, right-to-left, i18n
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=i@updu.la&item_name=Donation+for+WooCommerce+RTL+Plugin
 Requires at least: 3.0.1
 Tested up to: 4.1.1
@@ -12,20 +12,38 @@ Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email In
 
 == Description ==
 
-**WooCommerce RTL** works by disabling the default *Left-to-right (LTR)* styles and replacing them with an optimized *Right-to-left (RTL)* version for:
+**WooCommerce RTL** works by disabling the default *Left-to-right (LTR)* styles and replacing them with an optimized *Right-to-left (RTL)* versions for:
 
 * Admin Area *(Back-end)*.
 * Shop Interface *(Front-end)*.
+* Email Interface *(All email templates)*.
 
-In addtion, the plugin overrides the main **Email Styles** to be *RTL-optimized*.
+**CHECK OUT THE SCREENSHOTS OF THE PLUGIN TO GET AN IDEA OF WHAT IT DOES!**
 
 *WooCommerce RTL* is smart enough to not load these custom styles unless the current language WordPress is running is a *Right-to-left* one, such as **Arabic, Persian, and Urdu**.
 
+The main asset files will be updated each time WooCommerce gets a new upgrade. It will always stay up-to-date with the latest version of WooCommerce to ensure full compatibility.
+
+**Currenly compatible with version `2.3.7` of WooCommerce**
+
 == Installation ==
 
-1. Download and unzip `woocommerce-rtl.zip`.
-1. Upload `woocommerce-rtl` folder to the `/wp-content/plugins/` directory.
-1. Activate the plugin through the 'Plugins' menu in WordPress.
+**From your WordPress Dashboard**
+
+To install this plugin directly from your WordPress dashboard:
+
+* Log in to your WordPress dashboard.
+* Navigate to the "Plugins" menu and click "Add New".
+* In the search field, type “WooCommerce RTL” and click "Search Plugins".
+* Once you’ve found the plugin, you can install it by simply clicking “Install Now”.
+
+**Manuallly**
+
+The manual installation method involves downloading our plugin and uploading it to your webserver via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
+
+**Updating**
+
+Each time **WooCommerce** gets updated, a new version of **WooCommerce RTL** will get updated as well, so it keeps the asset files up-to-date.
 
 == Screenshots ==
 
