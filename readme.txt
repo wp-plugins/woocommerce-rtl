@@ -4,7 +4,7 @@ Tags: Arabic, Azeri, Azerbaijani1, Bakhtiari, Balochi, Farsi, Persian, Gilaki, J
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=i@updu.la&item_name=Donation+for+WooCommerce+RTL+Plugin
 Requires at least: 3.0.1
 Tested up to: 4.1.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,6 +62,9 @@ Each time **WooCommerce** gets updated, a new version of **WooCommerce RTL** wil
 12. "Order Details" box.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fix - Issue where Front-end styles don't get enqueued.
 
 = 1.0.1 =
 * Fix - Re-enable default styles when current language isn't Right-to-left (such as English).

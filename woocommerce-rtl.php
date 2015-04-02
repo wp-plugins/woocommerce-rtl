@@ -4,7 +4,7 @@
  * Plugin Name: WooCommerce RTL
  * Plugin URI: http://ar-wc.com
  * Description: Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email Interface of WooCommerce.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Abdullah Helayel
  * Author URI: http://updu.la/
  * Text Domain: wcrtl
@@ -111,6 +111,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
 
   }
+
+  add_action( 'wp_enqueue_scripts', 'wcrtl_enqueue_woocommerce_style', 11 );
 
 
   /**
