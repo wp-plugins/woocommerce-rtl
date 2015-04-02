@@ -20,11 +20,11 @@ Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email In
 
 **CHECK OUT THE SCREENSHOTS OF THE PLUGIN TO GET AN IDEA OF WHAT IT DOES!**
 
-*WooCommerce RTL* is smart enough to not load these custom styles unless the current language WordPress is running is a *Right-to-left* one, such as **Arabic, Persian, and Urdu**.
+**WooCommerce RTL** is smart enough to not load these custom styles unless the current language WordPress is running is a *Right-to-left* one, such as **Arabic, Persian, and Urdu**.
 
 The main asset files will be updated each time WooCommerce gets a new upgrade. It will always stay up-to-date with the latest version of WooCommerce to ensure full compatibility.
 
-**Currenly compatible with version `2.3.7` of WooCommerce**
+**Currently compatible with version `2.3.7` of WooCommerce**
 
 == Installation ==
 
@@ -37,7 +37,7 @@ To install this plugin directly from your WordPress dashboard:
 * In the search field, type “WooCommerce RTL” and click "Search Plugins".
 * Once you’ve found the plugin, you can install it by simply clicking “Install Now”.
 
-**Manuallly**
+**Manually**
 
 The manual installation method involves downloading our plugin and uploading it to your webserver via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
 
@@ -62,6 +62,9 @@ Each time **WooCommerce** gets updated, a new version of **WooCommerce RTL** wil
 12. "Order Details" box.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fix - Re-enable default styles when current language isn't Right-to-left (such as English).
 
 = 1.0.0 =
 * Initial release.

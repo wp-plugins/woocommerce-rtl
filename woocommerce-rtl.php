@@ -3,8 +3,8 @@
 /**
  * Plugin Name: WooCommerce RTL
  * Plugin URI: http://ar-wc.com
- * Description: Adds full RTL support to WooCommerce admin area, front-end, and email interface.
- * Version: 1.0.0
+ * Description: Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email Interface of WooCommerce.
+ * Version: 1.0.1
  * Author: Abdullah Helayel
  * Author URI: http://updu.la/
  * Text Domain: wcrtl
@@ -63,17 +63,32 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
   /**
    * Front-end styles
    */
+
+  // Disable default styles if is RTL, and return to them if is LTR.
+
   add_filter( 'woocommerce_enqueue_styles', 'wcrtl_dequeue_styles' );
 
   function wcrtl_dequeue_styles( $enqueue_styles ) {
+
     if ( is_rtl() ) {
+
       unset( $enqueue_styles['woocommerce-layout'] );
       unset( $enqueue_styles['woocommerce-smallscreen'] );
       unset( $enqueue_styles['woocommerce-general'] );
       return $enqueue_styles;
+
+    } else {
+
+      isset( $enqueue_styles['woocommerce-layout'] );
+      isset( $enqueue_styles['woocommerce-smallscreen'] );
+      isset( $enqueue_styles['woocommerce-general'] );
+      return $enqueue_styles;
+
     }
+
   }
 
+  // Now, enable the custom RTL styles, also if is RTL.
 
   function wcrtl_enqueue_woocommerce_style() {
 
@@ -96,8 +111,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
 
   }
-
-  add_action( 'wp_enqueue_scripts', 'wcrtl_enqueue_woocommerce_style', 11 );
 
 
   /**
