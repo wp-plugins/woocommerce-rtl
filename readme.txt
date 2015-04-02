@@ -63,7 +63,7 @@ Each time **WooCommerce** gets updated, a new version of **WooCommerce RTL** wil
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.0.2 =
 * Fix - Issue where Front-end styles don't get enqueued.
 
 = 1.0.1 =
