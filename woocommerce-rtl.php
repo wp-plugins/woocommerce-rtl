@@ -3,8 +3,8 @@
 /**
  * Plugin Name: WooCommerce RTL
  * Plugin URI: http://ar-wc.com
- * Description: Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email Interface of WooCommerce.
- * Version: 1.0.3
+ * Description: Adds full Right-to-left (RTL) support to the Admin Area & Front-end of WooCommerce.
+ * Version: 1.0.4
  * Author: Abdullah Helayel
  * Author URI: http://updu.la/
  * Text Domain: wcrtl
@@ -57,7 +57,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
     }
 
-  }
+  } // End wcrtl_admin_styles();
 
 
   /**
@@ -86,9 +86,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
     }
 
-  }
+  } // End wcrtl_dequeue_styles();
 
   // Now, enable the custom RTL styles, also if is RTL.
+
+  add_action( 'wp_enqueue_scripts', 'wcrtl_enqueue_woocommerce_style', 11 );
 
   function wcrtl_enqueue_woocommerce_style() {
 
@@ -110,47 +112,32 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
     }
 
-  }
-
-  add_action( 'wp_enqueue_scripts', 'wcrtl_enqueue_woocommerce_style', 11 );
+  } // End wcrtl_enqueue_woocommerce_style();
 
 
   /**
-   * Email interface
+   * Flip HTML Arrows
    */
-  add_filter( 'woocommerce_locate_template', 'wcrtl_woocommerce_locate_template', 10, 3 );
 
-  function wcrtl_woocommerce_locate_template( $template, $template_name, $template_path ) {
+  // Pagination
+  add_filter( 'woocommerce_pagination_args', 'wcrtl_paginate_links' );
 
-    global $woocommerce;
-
-    $_template = $template;
-
-    if ( ! $template_path ) $template_path = $woocommerce->template_url;
-
-    $plugin_path = plugin_dir_path( __FILE__ ) . 'woocommerce/';
-
-    // Look within passed path within the theme - this is priority
-    $template = locate_template(
-      array(
-        $template_path . $template_name,
-        $template_name
-      )
-    );
-
-    // Modification: Get the template from this plugin, if it exists
-    if ( ! $template && file_exists( $plugin_path . $template_name ) ) {
-      $template = $plugin_path . $template_name;
+  function wcrtl_paginate_links( $args ) {
+    if ( is_rtl() ) {
+      $args['prev_text'] = '&rarr;';
+      $args['next_text'] = '&larr;';
+      return $args;
     }
-
-    // Use default template
-    if ( ! $template ) {
-      $template = $_template;
-    }
-
-    // Return what we found
-    return $template;
-
   }
 
+  // Reviews
+  add_filter( 'woocommerce_comment_pagination_args', 'wcrtl_paginate_comments_links' );
+
+  function wcrtl_paginate_comments_links( $args ) {
+    if ( is_rtl() ) {
+      $args['prev_text'] = '&rarr;';
+      $args['next_text'] = '&larr;';
+      return $args;
+    }
+  }
 }

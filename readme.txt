@@ -3,12 +3,12 @@ Contributors: Updula
 Tags: Arabic, Azeri, Azerbaijani1, Bakhtiari, Balochi, Farsi, Persian, Gilaki, Javanese3, Kashmiri, Kazakh3, Kurdish, Sorani, Malay, Malayalam, Pashto, Punjabi, Qashqai, Sindhi, Somali, Sulu, Takestani, Turkmen, Uighur, Western Cham, WooCommerce, RTL, right-to-left, i18n
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=i@updu.la&item_name=Donation+for+WooCommerce+RTL+Plugin
 Requires at least: 3.0.1
-Tested up to: 4.2
-Stable tag: 1.0.3
+Tested up to: 4.2.2
+Stable tag: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email Interface of WooCommerce.
+Adds full Right-to-left (RTL) support to the Admin Area & Front-end of WooCommerce.
 
 == Description ==
 
@@ -16,7 +16,6 @@ Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email In
 
 * Admin Area *(Back-end)*.
 * Shop Interface *(Front-end)*.
-* Email Interface *(All email templates)*.
 
 **CHECK OUT THE SCREENSHOTS OF THE PLUGIN TO GET AN IDEA OF WHAT IT DOES!**
 
@@ -24,7 +23,7 @@ Adds full Right-to-left (RTL) support to the Admin Area, Front-end, and Email In
 
 The main asset files will be updated each time WooCommerce gets a new upgrade. It will always stay up-to-date with the latest version of WooCommerce to ensure full compatibility.
 
-**Currently compatible with version `2.3.8` of WooCommerce**
+**Currently compatible with version `2.3.10` of WooCommerce**
 
 == Installation ==
 
@@ -49,7 +48,6 @@ Each time **WooCommerce** gets updated, a new version of **WooCommerce RTL** wil
 
 1. Main "Shop" page.
 2. "Product Details" box.
-3. "Thank you for your order!" email interface.
 4. Single product page.
 5. WooCommerce settings page.
 6. Reviews tab.
@@ -59,9 +57,15 @@ Each time **WooCommerce** gets updated, a new version of **WooCommerce RTL** wil
 10. Checkout payment options.
 11. "Orders" page within WordPress dashboard.
 12. "Order Items" box.
-12. "Order Details" box.
+13. "Order Details" box.
 
 == Changelog ==
+
+= 1.0.4 =
+* WooCommerce 2.3.10 compatibility.
+* Tweak - Removed email RTL styles since the latest update of WC adds such styles to the core templates.
+* Fix - "Select2" close button position.
+* Fix - Flip HTML arrows in pagination and reviews.
 
 = 1.0.3 =
 * WooCommerce 2.3.8 compatibility.

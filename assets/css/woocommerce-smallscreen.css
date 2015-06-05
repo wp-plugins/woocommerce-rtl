@@ -1,4 +1,6 @@
+.woocommerce table.shop_table_responsive tbody th,
 .woocommerce table.shop_table_responsive thead,
+.woocommerce-page table.shop_table_responsive tbody th,
 .woocommerce-page table.shop_table_responsive thead {
   display: none;
 }
@@ -8,16 +10,20 @@
   border-top: 0;
 }
 
-.woocommerce table.shop_table_responsive tbody th,
-.woocommerce-page table.shop_table_responsive tbody th {
-  display: none;
-}
-
 .woocommerce table.shop_table_responsive tr,
 .woocommerce table.shop_table_responsive tr td,
 .woocommerce-page table.shop_table_responsive tr,
 .woocommerce-page table.shop_table_responsive tr td {
   display: block;
+}
+
+.woocommerce #content table.cart .product-thumbnail,
+.woocommerce table.cart .product-thumbnail,
+.woocommerce table.my_account_orders tr td.order-actions:before,
+.woocommerce-page #content table.cart .product-thumbnail,
+.woocommerce-page table.cart .product-thumbnail,
+.woocommerce-page table.my_account_orders tr td.order-actions:before {
+  display: none;
 }
 
 .woocommerce table.shop_table_responsive tr td:before,
@@ -34,11 +40,6 @@
 .woocommerce table.my_account_orders tr td.order-actions,
 .woocommerce-page table.my_account_orders tr td.order-actions {
   text-align: right;
-}
-
-.woocommerce table.my_account_orders tr td.order-actions:before,
-.woocommerce-page table.my_account_orders tr td.order-actions:before {
-  display: none;
 }
 
 .woocommerce table.my_account_orders tr td.order-actions .button,
@@ -79,13 +80,6 @@
 .woocommerce-page div.product div.summary {
   float: none;
   width: 100%;
-}
-
-.woocommerce #content table.cart .product-thumbnail,
-.woocommerce table.cart .product-thumbnail,
-.woocommerce-page #content table.cart .product-thumbnail,
-.woocommerce-page table.cart .product-thumbnail {
-  display: none;
 }
 
 .woocommerce #content table.cart td.actions,
