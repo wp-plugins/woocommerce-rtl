@@ -2,9 +2,9 @@
 
 /**
  * Plugin Name: WooCommerce RTL
- * Plugin URI: http://ar-wc.com
- * Description: Adds full Right-to-left (RTL) support to the Admin Area & Front-end of WooCommerce.
- * Version: 1.0.4
+ * Plugin URI: https://twitter.com/WooCommerceAR
+ * Description: Adds full Right-to-left (RTL) support to the User Interface & Admin Area of WooCommerce.
+ * Version: 1.0.5
  * Author: Abdullah Helayel
  * Author URI: http://updu.la/
  * Text Domain: wcrtl
@@ -30,29 +30,27 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
     if ( is_rtl() ) {
 
-      // menu.css
+      // menu css
       wp_dequeue_style( 'woocommerce_admin_menu_styles' );
-      wp_enqueue_style( 'woocommerce_admin_menu_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/menu.css', array(), WC_VERSION );
+      wp_enqueue_style( 'woocommerce_admin_menu_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/menu.rtl.css', array(), WC_VERSION );
 
-      $screen = get_current_screen();
-
-      // admin.css
-      if ( in_array( $screen->id, wc_get_screen_ids() ) ) {
+      // admin css
+      if ( in_array( get_current_screen()->id, wc_get_screen_ids() ) ) {
         wp_dequeue_style( 'woocommerce_admin_styles' );
-        wp_enqueue_style( 'woocommerce_admin_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/admin.css', array(), WC_VERSION );
+        wp_enqueue_style( 'woocommerce_admin_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/admin.rtl.css', array(), WC_VERSION );
         wp_enqueue_style( 'wcrtl_admin_styles', plugin_dir_url( __FILE__ ) . 'assets/css/wcrtl-admin.css', array(), WC_VERSION );
       }
 
-      // dashboard.css
-      if ( in_array( $screen->id, array( 'dashboard' ) ) ) {
+      // dashboard css
+      if ( in_array( get_current_screen()->id, array( 'dashboard' ) ) ) {
         wp_dequeue_style( 'woocommerce_admin_dashboard_styles' );
-        wp_enqueue_style( 'woocommerce_admin_dashboard_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/dashboard.css', array(), WC_VERSION );
+        wp_enqueue_style( 'woocommerce_admin_dashboard_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/dashboard.rtl.css', array(), WC_VERSION );
       }
 
-      // reports-print.css
-      if ( in_array( $screen->id, array( 'woocommerce_page_wc-reports' ) ) ) {
+      // reports-print css
+      if ( in_array( get_current_screen()->id, array( 'woocommerce_page_wc-reports' ) ) ) {
         wp_dequeue_style( 'woocommerce_admin_dashboard_styles' );
-        wp_enqueue_style( 'woocommerce_admin_print_reports_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/reports-print.css', array(), WC_VERSION, 'print' );
+        wp_enqueue_style( 'woocommerce_admin_print_reports_styles_rtl', plugin_dir_url( __FILE__ ) . 'assets/css/reports-print.rtl.css', array(), WC_VERSION, 'print' );
       }
 
     }
@@ -94,9 +92,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
   function wcrtl_enqueue_woocommerce_style() {
 
-    wp_register_style( 'woocommerce-layout-rtl', plugin_dir_url( __FILE__ ) . 'assets/css/woocommerce-layout.css', array(), WC_VERSION, 'all' );
-    wp_register_style( 'woocommerce-smallscreen-rtl', plugin_dir_url( __FILE__ ) . 'assets/css/woocommerce-smallscreen.css', array( 'woocommerce-layout' ), WC_VERSION, 'only screen and (max-width: ' . apply_filters( 'woocommerce_style_smallscreen_breakpoint', $breakpoint = '768px' ) . ')' );
-    wp_register_style( 'woocommerce-general-rtl', plugin_dir_url( __FILE__ ) . 'assets/css/woocommerce.css', array(), WC_VERSION, 'all' );
+    wp_register_style( 'woocommerce-layout-rtl', plugin_dir_url( __FILE__ ) . 'assets/css/woocommerce-layout.rtl.css', array(), WC_VERSION, 'all' );
+    wp_register_style( 'woocommerce-smallscreen-rtl', plugin_dir_url( __FILE__ ) . 'assets/css/woocommerce-smallscreen.rtl.css', array( 'woocommerce-layout' ), WC_VERSION, 'only screen and (max-width: ' . apply_filters( 'woocommerce_style_smallscreen_breakpoint', $breakpoint = '768px' ) . ')' );
+    wp_register_style( 'woocommerce-general-rtl', plugin_dir_url( __FILE__ ) . 'assets/css/woocommerce.rtl.css', array(), WC_VERSION, 'all' );
     wp_register_style( 'wcrtl-general', plugin_dir_url( __FILE__ ) . 'assets/css/wcrtl-woocommerce.css', array(), WC_VERSION, 'all' );
 
     if ( class_exists( 'woocommerce' ) && is_rtl() ) {
@@ -113,7 +111,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
 
   } // End wcrtl_enqueue_woocommerce_style();
-
 
   /**
    * Flip HTML Arrows

@@ -3,27 +3,27 @@ Contributors: Updula
 Tags: Arabic, Azeri, Azerbaijani1, Bakhtiari, Balochi, Farsi, Persian, Gilaki, Javanese3, Kashmiri, Kazakh3, Kurdish, Sorani, Malay, Malayalam, Pashto, Punjabi, Qashqai, Sindhi, Somali, Sulu, Takestani, Turkmen, Uighur, Western Cham, WooCommerce, RTL, right-to-left, i18n
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=i@updu.la&item_name=Donation+for+WooCommerce+RTL+Plugin
 Requires at least: 3.0.1
-Tested up to: 4.2.2
-Stable tag: 1.0.4
+Tested up to: 4.2.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Adds full Right-to-left (RTL) support to the Admin Area & Front-end of WooCommerce.
+Adds full Right-to-left (RTL) support to the User Interface & Admin Area of WooCommerce.
 
 == Description ==
 
-**WooCommerce RTL** works by disabling the default *Left-to-right (LTR)* styles and replacing them with an optimized *Right-to-left (RTL)* versions for:
+**WooCommerce RTL** works by disabling the default *Left-to-right (LTR)* styles and replacing them with an optimized *Right-to-left (RTL)* styles for:
 
+* User Interface *(Front-end)*.
 * Admin Area *(Back-end)*.
-* Shop Interface *(Front-end)*.
 
 **CHECK OUT THE SCREENSHOTS OF THE PLUGIN TO GET AN IDEA OF WHAT IT DOES!**
 
 **WooCommerce RTL** is smart enough to not load these custom styles unless the current language WordPress is running is a *Right-to-left* one, such as **Arabic, Persian, and Urdu**.
 
-The main asset files will be updated each time WooCommerce gets a new upgrade. It will always stay up-to-date with the latest version of WooCommerce to ensure full compatibility.
+The main asset files gets updated manually each time WooCommerce receives a new upgrade, so it always stay up-to-date with the latest version of WooCommerce to ensure full compatibility.
 
-**Currently compatible with version `2.3.10` of WooCommerce**
+**Currently compatible with version `2.4+` of WooCommerce**
 
 == Installation ==
 
@@ -60,6 +60,9 @@ Each time **WooCommerce** gets updated, a new version of **WooCommerce RTL** wil
 13. "Order Details" box.
 
 == Changelog ==
+
+= 1.0.5 =
+* WooCommerce 2.4.4 compatibility.
 
 = 1.0.4 =
 * WooCommerce 2.3.10 compatibility.
